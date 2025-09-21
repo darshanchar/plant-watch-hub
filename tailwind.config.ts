@@ -31,6 +31,14 @@ export default {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
@@ -47,6 +55,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        irrigation: {
+          green: "hsl(var(--primary-green))",
+          blue: "hsl(var(--primary-blue))",
+          "light-green": "hsl(var(--light-green))",
+          "light-blue": "hsl(var(--light-blue))",
+          soil: "hsl(var(--soil-brown))",
+          water: "hsl(var(--water-blue))",
+          pump: "hsl(var(--pump-orange))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -62,6 +79,14 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-background': 'var(--gradient-background)',
+      },
+      backdropBlur: {
+        'glass': '10px',
       },
       keyframes: {
         "accordion-down": {
@@ -80,10 +105,39 @@ export default {
             height: "0",
           },
         },
+        "float": {
+          "0%, 100%": {
+            transform: "translateY(0px)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
+        "pulse-green": {
+          "0%, 100%": {
+            boxShadow: "0 0 0 0 rgba(34, 197, 94, 0.4)",
+          },
+          "50%": {
+            boxShadow: "0 0 0 10px rgba(34, 197, 94, 0)",
+          },
+        },
+        "slide-up": {
+          from: {
+            opacity: "0",
+            transform: "translateY(10px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 3s ease-in-out infinite",
+        "pulse-green": "pulse-green 2s infinite",
+        "slide-up": "slide-up 0.5s ease-out",
       },
     },
   },
