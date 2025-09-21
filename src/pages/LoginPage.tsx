@@ -18,9 +18,9 @@ const LoginPage = () => {
     e.preventDefault();
     setIsLoading(true);
     
-    // Simulate login
+    // Simulate login with specific credentials
     setTimeout(() => {
-      if (email && password) {
+      if (email === "agrifriend24@gmail.com" && password === "agrifriend24") {
         toast({
           title: "Login Successful",
           description: "Welcome to Smart Irrigation System",
@@ -29,7 +29,7 @@ const LoginPage = () => {
       } else {
         toast({
           title: "Login Failed",
-          description: "Please enter valid credentials",
+          description: "Invalid credentials. Please check your email and password.",
           variant: "destructive",
         });
       }
@@ -98,12 +98,12 @@ const LoginPage = () => {
                 className="text-sm text-muted-foreground hover:text-primary"
                 onClick={() => {
                   toast({
-                    title: "Demo Mode",
-                    description: "This is a frontend demo. Use any credentials to continue.",
+                    title: "Demo Credentials",
+                    description: "Email: agrifriend24@gmail.com | Password: agrifriend24",
                   });
                 }}
               >
-                Forgot password?
+                Show demo credentials
               </Button>
             </div>
           </form>
