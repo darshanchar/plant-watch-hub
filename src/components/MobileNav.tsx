@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { LayoutDashboard, BarChart3, Bell, LogOut } from "lucide-react";
+import { LayoutDashboard, BarChart3, Bell, Settings, LogOut } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 
@@ -12,6 +12,7 @@ const MobileNav = () => {
     { path: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     { path: "/reports", icon: BarChart3, label: "Reports" },
     { path: "/notifications", icon: Bell, label: "Notifications", badge: 2 },
+    { path: "/settings", icon: Settings, label: "Settings" },
   ];
 
   const handleLogout = () => {
@@ -54,7 +55,7 @@ const MobileNav = () => {
         
         <button
           onClick={handleLogout}
-          className="flex flex-col items-center space-y-1 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-white/10 transition-all duration-200"
+          className="flex flex-col items-center space-y-1 p-2 rounded-lg text-destructive hover:text-destructive hover:bg-destructive/10 transition-all duration-200"
         >
           <LogOut className="h-5 w-5" />
           <span className="text-xs font-medium">Logout</span>

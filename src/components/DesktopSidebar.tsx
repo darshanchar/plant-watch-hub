@@ -88,12 +88,7 @@ const DesktopSidebar = () => {
         <Button
           variant="ghost"
           className="w-full justify-start space-x-3 h-12 hover:bg-white/10"
-          onClick={() => {
-            toast({
-              title: "Settings",
-              description: "Settings panel coming soon",
-            });
-          }}
+          onClick={() => navigate("/settings")}
         >
           <Settings className="h-5 w-5" />
           <span>Settings</span>
