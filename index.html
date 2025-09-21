@@ -18,9 +18,12 @@
     <meta name="twitter:description" content="Advanced IoT-powered irrigation management system" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     
+    <!-- Optimize critical CSS loading to prevent render blocking -->
+    <link rel="preload" href="/src/index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="/src/index.css"></noscript>
+    
     <!-- Preload critical resources to reduce network dependency chains -->
     <link rel="modulepreload" href="/src/main.tsx" />
-    <link rel="preload" href="/src/index.css" as="style" />
   </head>
 
   <body>
